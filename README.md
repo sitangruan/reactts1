@@ -1,2 +1,2 @@
 # reactts1
-React typescript project for demo purpose
+React typescript project for demo purpose.
