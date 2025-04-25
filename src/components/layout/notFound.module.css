@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.notFoundContainer {
+  @apply flex flex-col flex-1 justify-center items-center overflow-hidden text-2xl font-bold text-red-500 p-10;
+}

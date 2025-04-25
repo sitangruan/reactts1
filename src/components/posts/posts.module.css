@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.postsContainer {
+  @apply flex flex-1 flex-col overflow-hidden p-[10px] text-2xl font-bold text-blue-500;
+}

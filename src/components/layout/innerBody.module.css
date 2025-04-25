@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.innerBodyContainer {
+  @apply flex flex-1 flex-col overflow-hidden relative p-[10px];
+}
