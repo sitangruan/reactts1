@@ -5,6 +5,12 @@
 }
 
 .app-header {
-  @apply flex items-center text-3xl border-1 border-slate-500 pl-5 font-bold w-full h-20 box-border;
+  @apply flex justify-between items-center border-1 border-slate-500 pl-5 font-bold w-full h-20 box-border;
+  .title {
+    @apply text-3xl;
+  }
+  a {
+    @apply text-2xl underline pr-4 text-blue-300 cursor-pointer;
+  }
 }
 

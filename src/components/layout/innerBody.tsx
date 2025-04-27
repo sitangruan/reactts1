@@ -13,7 +13,7 @@ const Todos = lazy(() => import('../todos/todos'));
 const Posts = lazy(() => import('../posts/posts'));
 const Albums = lazy(() => import('../albums/albums'));
 
-const getRouteView = (url:string):ReactNode => {
+const getRouteView = (url:string): ReactNode => {
   switch(url) {
     case 'users':
       return <Users/>;
@@ -27,7 +27,7 @@ const getRouteView = (url:string):ReactNode => {
   }
 }
 
-const InnerBody: React.FC<InnerBodyProps> = ({routes} : InnerBodyProps) => {
+const InnerBody: React.FC<InnerBodyProps> = ({routes}: InnerBodyProps) => {
   let defaultRoute = routes.find(r => r.isDefaultLink);
   if (!defaultRoute && routes && routes.length > 0) {
     defaultRoute = routes[0];

@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+.dialogWrapper {
+  @apply absolute flex justify-center items-center w-full h-full top-0 left-0 bg-[#00000166];
+  &.notTransparent {
+    @apply bg-[#ffffff];
+  }
+}
+
+@keyframes ldsSpinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ldsSpinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ldsSpinner {
+  @apply relative;
+}
+
+.ldsSpinner div {
+  @apply left-[94px] top-[48px] absolute bg-[#333] w-[12px] h-[24px] rounded-[40%];
+  
+  -webkit-animation: ldsSpinner linear 1s infinite;
+  animation: ldsSpinner linear 1s infinite;
+  
+  -webkit-transform-origin: 6px 52px;
+  transform-origin: 6px 52px;
+}
+.ldsSpinner div:nth-child(1) {
+  @apply rotate-0;
+  
+  -webkit-animation-delay: -0.916666666666667s;
+  animation-delay: -0.916666666666667s;
+}
+.ldsSpinner div:nth-child(2) {
+  @apply rotate-30;
+
+  -webkit-animation-delay: -0.833333333333333s;
+  animation-delay: -0.833333333333333s;
+}
+.ldsSpinner div:nth-child(3) {
+  @apply rotate-60;
+  
+  -webkit-animation-delay: -0.75s;
+  animation-delay: -0.75s;
+}
+.ldsSpinner div:nth-child(4) {
+  @apply rotate-90;
+  
+  -webkit-animation-delay: -0.666666666666667s;
+  animation-delay: -0.666666666666667s;
+}
+.ldsSpinner div:nth-child(5) {
+  @apply rotate-120;
+  
+  -webkit-animation-delay: -0.583333333333333s;
+  animation-delay: -0.583333333333333s;
+}
+.ldsSpinner div:nth-child(6) {
+  @apply rotate-150;
+  
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.ldsSpinner div:nth-child(7) {
+  @apply rotate-180;
+  
+  -webkit-animation-delay: -0.416666666666667s;
+  animation-delay: -0.416666666666667s;
+}
+.ldsSpinner div:nth-child(8) {
+  @apply rotate-210;
+  
+  -webkit-animation-delay: -0.333333333333333s;
+  animation-delay: -0.333333333333333s;
+}
+.ldsSpinner div:nth-child(9) {
+  @apply rotate-240;
+  
+  -webkit-animation-delay: -0.25s;
+  animation-delay: -0.25s;
+}
+.ldsSpinner div:nth-child(10) {
+  @apply rotate-270;
+  
+  -webkit-animation-delay: -0.166666666666667s;
+  animation-delay: -0.166666666666667s;
+}
+.ldsSpinner div:nth-child(11) {
+  @apply rotate-300;
+  
+  -webkit-animation-delay: -0.083333333333333s;
+  animation-delay: -0.083333333333333s;
+}
+.ldsSpinner div:nth-child(12) {
+  @apply rotate-330;
+  
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.ldsSpinner {
+  @apply w-[200px]! h-[200px]!;
+  
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}

@@ -1,5 +1,7 @@
 import NavigationLink from "../modals/NavigationLink";
 
+
+
 export const navLinks: Array<NavigationLink> = [
   new NavigationLink(1, "Todos", "todos", true),
   new NavigationLink(2, "Users", "users"),
@@ -7,3 +9,4 @@ export const navLinks: Array<NavigationLink> = [
   new NavigationLink(4, "Posts", "posts"),
 ];
 
+export const sourceCodesUrl = 'https://github.com/sitangruan/reactts1';
