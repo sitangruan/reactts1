@@ -15,7 +15,7 @@ const apiCaller = {
         return response.json();
       })
     },
-    postTodo(item) {
+    postTodo(item: any) {
       return fetch(apiUrls.todos, {
         method: 'POST',
         body: JSON.stringify(item),
