@@ -1,3 +1,9 @@
+/**
+ * This the Sidebar component which contains the top level routing link.
+ * It has responsive desgin so when the device screen is equal or smaller than 768px (iPad mini), then it is horizonally aligned.
+ * Bigger than that size, it is vertically aligned.
+ */
+
 import { SidebarProps } from "../../common/interfaces";
 import { NavLink } from "react-router-dom";
 import classes from './sidebar.module.css';

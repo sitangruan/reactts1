@@ -1,3 +1,8 @@
+/**
+* This is the loading mask component which can be toggled to disable user input while waiting back end like server api call be finished.
+*/
+
+
 import classes from './loadingMask.module.css';
 import { LoadingMaskProps } from '../../common/interfaces';
 

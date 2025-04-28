@@ -1,6 +1,8 @@
+/**
+ * This the central place for all constant value definitions.
+ */
+
 import NavigationLink from "../modals/NavigationLink";
-
-
 
 export const navLinks: Array<NavigationLink> = [
   new NavigationLink(1, "Todos", "todos", true),

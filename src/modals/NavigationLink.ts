@@ -1,3 +1,7 @@
+/**
+ * This is the navigation link class mapping to the navigation link in the left navigation panel.
+ */
+
 export default class NavigationLink {
   public Id: number;
   public DisplayName: string;

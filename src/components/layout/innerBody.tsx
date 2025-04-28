@@ -1,5 +1,5 @@
-/*
-This inner body component holds teh top leverl router view such as Todos, Users, Posts, Albums
+/**
+* This inner body component holds teh top leverl router view such as Todos, Users, Posts, Albums
 */
 
 import { InnerBodyProps } from "../../common/interfaces";

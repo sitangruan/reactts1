@@ -1,3 +1,7 @@
+/**
+ * This the central place for all interface definitions.
+ */
+
 import { ReactNode } from "react";
 import NavigationLink from "../modals/NavigationLink";
 

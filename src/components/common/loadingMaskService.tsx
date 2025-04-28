@@ -1,8 +1,8 @@
-/*
-This is the loading service which allows toggling the global loading mask from anywhere.
+/**
+* This is the loading service which allows toggling the global loading mask from anywhere.
 */
 
-import React, { Children, createContext, JSX, useContext, useState} from "react";
+import React, { JSX, useContext, useState} from "react";
 import LoadingMask from "./loadingMask";
 import { LoadingMaskServiceProps } from "../../common/interfaces";
 
