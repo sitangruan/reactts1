@@ -1,3 +1,15 @@
+This is demo project to practice React + Typescript+ Vite + TailwindCss.
+
+The deployment url is:
+
+https://gray-flower-04aef540f.6.azurestaticapps.net/
+
+By Sitang Ruan.
+
+Thanks for viewing!
+
+*************************** Below is the content of the default README file. **********************
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
