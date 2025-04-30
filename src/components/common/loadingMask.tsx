@@ -7,7 +7,7 @@ import classes from './loadingMask.module.css';
 import { LoadingMaskProps } from '../../common/interfaces';
 
 const LoadingMask: React.FC<LoadingMaskProps> = ({visible, showSpinner=true, isMaskTransparent=false}: LoadingMaskProps) => {
-  if (!open) {
+  if (!visible) {
     return <></>;
   }
 
@@ -27,9 +27,7 @@ const LoadingMask: React.FC<LoadingMaskProps> = ({visible, showSpinner=true, isM
   </div> : <></>
 
   const wrapperClass = isMaskTransparent ? classes.dialogWrapper : [classes.dialogWrapper, classes.notTransparent].join(' ');
-  const loader = <div className={wrapperClass}>{spinner}</div>;
-  
-  return visible ? loader : <></>;
+  return <div className={wrapperClass}>{spinner}</div>;
 }
 
 export default LoadingMask;

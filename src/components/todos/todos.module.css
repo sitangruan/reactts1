@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
 .todosContainer {
-  @apply flex flex-1 flex-col overflow-hidden p-[10px] text-2xl font-bold text-blue-500;
+  @apply flex flex-1 flex-col overflow-hidden p-[10px] h-full text-3xl text-blue-500;
+  .topRow {
+    @apply flex h-[40px] items-center justify-end;
+
+    input[type='radio'], label {
+      @apply cursor-pointer mr-[10px] max-md:mr-[5px];
+    }
+
+    button {
+      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px];
+    }
+  }
+  .todoView {
+    @apply flex-1 text-2xl text-green-500;
+  }
 }

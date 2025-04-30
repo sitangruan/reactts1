@@ -7,6 +7,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import NotFound from "./notFound";
 import classes from './innerBody.module.css';
 import { lazy, ReactNode, Suspense } from "react";
+import LoadingMask from "../common/loadingMask";
 
 const Users = lazy(() => import('../users/users'));
 const Todos = lazy(() => import('../todos/todos'));
@@ -38,9 +39,10 @@ const InnerBody: React.FC<InnerBodyProps> = ({routes}: InnerBodyProps) => {
 
   const solidRouteElements = [];
   for (let i = 0; i < routes.length; i++) {
-    const myRoute = routes[i].Route;
-    const myElement = getRouteView(myRoute);
-    solidRouteElements.push(<Route path={myRoute} element={<Suspense>{myElement}</Suspense>}></Route>)
+    const myRoute = routes[i];
+    const myRouteValue = myRoute.hasNestedLink ? `${myRoute.Route}/*` : myRoute.Route;
+    const myElement = getRouteView(myRouteValue);
+    solidRouteElements.push(<Route path={myRouteValue} element={<Suspense fallback={<LoadingMask visible={true}/>}>{myElement}</Suspense>}></Route>)
   }
 
   return (

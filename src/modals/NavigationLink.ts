@@ -7,11 +7,13 @@ export default class NavigationLink {
   public DisplayName: string;
   public Route: string;
   public isDefaultLink: boolean;
+  public hasNestedLink: boolean;
 
-  public constructor(_Id: number, _DisplayName: string, _Route: string, _IsDefaultLink = false) {
+  public constructor(_Id: number, _DisplayName: string, _Route: string, _IsDefaultLink = false, _HasNestedLink = false) {
     this.Id = _Id;
     this.DisplayName = _DisplayName;
     this.Route = _Route;
     this.isDefaultLink = _IsDefaultLink;
+    this.hasNestedLink = _HasNestedLink;
   }
 }
