@@ -17,3 +17,41 @@ export enum ViewMode {
   Grid = 0,
   Graph,
 }
+
+export enum TodoCompletedType {
+  YES = 'YES',
+  NO = 'NO'
+}
+
+export const todoGridColumns = [
+  {
+    fieldName: 'userId',
+    display: 'User ID'
+  },
+  {
+    fieldName: 'id',
+    display: 'ID'
+  },
+  {
+    fieldName: 'title',
+    display: 'Title'
+  },
+  {
+    fieldName: 'completed',
+    display: 'Completed'
+  },
+];
+
+export enum TodoActionType {
+  LOAD = 'LOAD_TODOS',
+  ADD = 'ADD_TODO',
+  DELETE = 'DELETE_TODO',
+  UPDATE = 'UPDATE_TODO',
+}
+
+export enum PostActionType {
+  LOAD = 'LOAD_POSTS',
+  ADD = 'ADD_POST',
+  DELETE = 'DELETE_POST',
+  UPDATE = 'UPDATE_POST',
+}
