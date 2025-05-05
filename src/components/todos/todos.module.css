@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .todosContainer {
-  @apply flex flex-1 flex-col overflow-hidden p-[10px] h-full text-3xl text-blue-500;
+  @apply flex flex-1 flex-col overflow-hidden p-[10px] h-full text-blue-500;
   .topRow {
     @apply flex h-[40px] items-center justify-end;
 
@@ -10,10 +10,10 @@
     }
 
     button {
-      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px];
+      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px] cursor-pointer;
     }
   }
   .todoView {
-    @apply flex-1 text-2xl text-green-500;
+    @apply flex-1;
   }
 }

@@ -3,7 +3,7 @@
  */
 
 import { TodoActionType } from "../common/constants";
-import TodoAction from "../modals/TodoAction";
+import { TodoAction } from "../modals/TodoAction";
 import TodoElement from "../modals/TodoElement";
 
 const todoReducer = (state = Array<TodoElement>(), action: TodoAction | undefined): Array<TodoElement> => {
@@ -11,17 +11,17 @@ const todoReducer = (state = Array<TodoElement>(), action: TodoAction | undefine
     return state == undefined ? Array<TodoElement>() : state;
   }
 
-  switch (action.Type) {
+  switch (action.type) {
     case TodoActionType.LOAD:
-      if (Array.isArray(action.Data)) {
-        return [...action.Data];
+      if (Array.isArray(action.payload)) {
+        return [...action.payload];
       } else {
-        return [action.Data];
+        return [action.payload];
       }
     case TodoActionType.ADD:
       return [
         ...state,
-        Array.isArray(action.Data) ? action.Data[0] : action.Data
+        Array.isArray(action.payload) ? action.payload[0] : action.payload
       ];
     default:
       return state == undefined ? Array<TodoElement>() : state;

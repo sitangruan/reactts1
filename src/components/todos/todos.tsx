@@ -11,6 +11,9 @@ import apiCaller from '../../api/apiCaller';
 import { ViewMode } from '../../common/constants';
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import LoadingMask from '../common/loadingMask';
+import * as actions from '../../actions/todoActionCreator';
+import TodoElement from '../../modals/TodoElement';
+import { useAppDispatch } from '../../reducers/hooks';
 
 const TodoGrid = lazy(() => import('./todoGrid'));
 const TodoGraph = lazy(() => import('./todoGraph'));
@@ -19,13 +22,21 @@ const Todos: React.FC = () => {
   const mask = useLoadingMask();
   const navigate = useNavigate();
   const [mode, setMode] = useState<ViewMode>(ViewMode.Grid);
+  const dispatch = useAppDispatch();
 
   const loadTodos = () => {
     mask(true);
     apiCaller.todos.getTodos().then(data => {
-      console.log('The Todos data has been fetched:', data);
+      const myList = Array<TodoElement>();
+      if (Array.isArray(data)) {
+        for (let i = 0; i < data.length; i++) {
+          myList.push(new TodoElement(data[i].userId, data[i].id, data[i].title, data[i].completed));
+        }
+      } else {
+        myList.push(new TodoElement(data.userId, data.id, data.title, data.completed));
+      }
 
-      //To be implemented: handle the data
+      dispatch(actions.loadTodoListAction(myList));
     })
     .catch(e => {
       console.log('Error happened. ', e);
@@ -49,6 +60,7 @@ const Todos: React.FC = () => {
     <div className={classes.todosContainer}>
       This is Todos.
       <div className={classes.topRow}>
+        <button onClick={loadTodos}>Refresh</button>
         <input type='radio' id='gridRadio' value={ViewMode.Grid} checked={mode === ViewMode.Grid} name='viewPattern'
           onChange={() => onChangeViewPattern(ViewMode.Grid)}/>
         <label htmlFor='gridRadio'>Grid</label>        

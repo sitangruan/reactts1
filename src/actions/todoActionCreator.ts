@@ -3,15 +3,14 @@
  */
 
 import { TodoActionType } from "../common/constants";
-import TodoAction from "../modals/TodoAction";
 import TodoElement from "../modals/TodoElement";
 
-export const loadTodoListAction = (todoList: Array<TodoElement>): TodoAction => ({
-  Type: TodoActionType.LOAD,
-  Data: todoList
+export const loadTodoListAction = (todoList: Array<TodoElement>) => ({
+  type: TodoActionType.LOAD,
+  payload: todoList
 });
 
-export const addTodoAction = (todo: TodoElement): TodoAction => ({
-  Type: TodoActionType.ADD,
-  Data: todo
-})
+export const addTodoAction = (todo: TodoElement) => ({
+  type: TodoActionType.ADD,
+  payload: todo
+});
