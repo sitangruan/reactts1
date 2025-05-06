@@ -10,7 +10,7 @@
     }
 
     button {
-      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px] cursor-pointer;
+      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px] cursor-pointer bg-gray-300;
     }
   }
   .todoView {

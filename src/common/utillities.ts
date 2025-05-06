@@ -10,7 +10,8 @@ export const sleepFor = (duration: number): void => {
 }
 
 export const compareWrapper = (fieldName: string, isAsc = true): ((a: any, b: any) => number) => {
- const innerCompare = (a: any, b: any): number => {
+  console.log('sort fieldname', fieldName);
+  const innerCompare = (a: any, b: any): number => {
   const biggerValue = isAsc ? 1 : -1;
   const smallerValue = 0 - biggerValue;
 

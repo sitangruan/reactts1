@@ -4,8 +4,9 @@
 
 import { apiUrls } from "../common/urls";
 import { sleepFor } from "../common/utillities";
+import TodoElement from "../modals/TodoElement";
 
-const forceWaitingTime = 1000;
+const forceWaitingTime = 200;
 
 const apiCaller = {
   todos: {
@@ -15,7 +16,7 @@ const apiCaller = {
         return response.json();
       })
     },
-    postTodo(item: any) {
+    postTodo(item: TodoElement) {
       return fetch(apiUrls.todos, {
         method: 'POST',
         body: JSON.stringify(item),

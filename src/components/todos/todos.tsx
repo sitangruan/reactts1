@@ -58,7 +58,6 @@ const Todos: React.FC = () => {
 
   return (
     <div className={classes.todosContainer}>
-      This is Todos.
       <div className={classes.topRow}>
         <button onClick={loadTodos}>Refresh</button>
         <input type='radio' id='gridRadio' value={ViewMode.Grid} checked={mode === ViewMode.Grid} name='viewPattern'

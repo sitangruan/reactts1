@@ -23,21 +23,28 @@ export enum TodoCompletedType {
   NO = 'NO'
 }
 
+export enum TodoFieldName {
+  userId = 'userId',
+  id = 'id',
+  title = 'title',
+  completed = 'completed'
+};
+
 export const todoGridColumns = [
   {
-    fieldName: 'userId',
+    fieldName: TodoFieldName.userId,
     display: 'User ID'
   },
   {
-    fieldName: 'id',
+    fieldName: TodoFieldName.id,
     display: 'ID'
   },
   {
-    fieldName: 'title',
+    fieldName: TodoFieldName.title,
     display: 'Title'
   },
   {
-    fieldName: 'completed',
+    fieldName: TodoFieldName.completed,
     display: 'Completed'
   },
 ];

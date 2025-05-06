@@ -1,5 +1,77 @@
 @import 'tailwindcss';
 
 .todoGridContainer {
+  @apply h-full;
+
+  .todoGridButtonRow {
+    @apply flex items-center h-[40px] max-sm:justify-center max-sm:w-full;
+    
+    button {
+      @apply w-[120px] h-[28px] max-sm:w-[90%] cursor-pointer bg-gray-300;
+    }
+  }
   
+  .todoGridContent {
+    @apply mt-[5px] h-[90%] relative;
+
+    .colUserId, .colId, .colCompleted {
+      @apply w-[20%];
+    }
+
+    .colTitle {
+      @apply w-[40%];
+    }
+
+    .colCompleted {
+      @apply flex justify-center items-center;
+    }
+
+    .headerRow {
+      @apply flex w-full justify-between gap-[5px] h-[40px] flex-[0_0_basis];
+
+      .colHeader {
+        @apply flex justify-center items-center cursor-pointer font-bold bg-gray-200;
+
+        .emptyIcon {
+          @apply w-[16px] h-[16px] ml-[10px];
+        }
+
+        .sortIcon {
+          @apply flex w-[16px] h-[16px] ml-[10px] bg-[url(../../assets/images/sorting.png)] bg-cover;
+        }
+
+        .desc {
+          @apply rotate-[180deg];
+        }
+      }
+    }
+
+    .solidRowsContainer {
+      @apply max-h-[640px] min-h-[300px] overflow-y-auto;
+
+      .row {
+        @apply flex flex-1 h-[32px];
+
+        .cell {
+          @apply flex h-[32px] items-center pl-[15px];
+
+          .ellipsisText {
+            @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis;
+          }
+        }
+      }
+
+      .row:hover {
+        @apply bg-[#0000001a];
+      }
+
+      .oddRow {        
+        @apply bg-[#0000000a];
+      }
+    }
+
+    .emptyContent {
+      @apply flex flex-1 max-h-[640px] min-h-[300px] justify-center items-center flex-col font-bold text-2xl;
+    }
+  }
 }
