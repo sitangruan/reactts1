@@ -11,6 +11,8 @@ export const navLinks: Array<NavigationLink> = [
   new NavigationLink(4, "Posts", "posts"),
 ];
 
+export const linkedInUrl = 'https://www.linkedin.com/in/sitang-ruan/';
+
 export const sourceCodesUrl = 'https://github.com/sitangruan/reactts1';
 
 export enum ViewMode {
@@ -24,10 +26,10 @@ export enum TodoCompletedType {
 }
 
 export enum TodoFieldName {
-  userId = 'userId',
-  id = 'id',
-  title = 'title',
-  completed = 'completed'
+  userId = 'UserId',
+  id = 'Id',
+  title = 'Title',
+  completed = 'Completed'
 };
 
 export const todoGridColumns = [
