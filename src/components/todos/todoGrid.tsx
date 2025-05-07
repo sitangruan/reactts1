@@ -74,6 +74,7 @@ const TodoGrid: React.FC = () => {
 
   const headerRow:JSX.Element = <div className={classes.headerRow}>{colHeaders}</div>;
   const solidRows = Array<JSX.Element>();
+  const solidRowsMobile = Array<JSX.Element>();
 
   if (myTodos && myTodos.length > 0) {
     myTodos.forEach((item, index) => {
@@ -87,6 +88,29 @@ const TodoGrid: React.FC = () => {
 
       const extraClass = index % 2 > 0 ? classes.oddRow : '';
       solidRows.push(<div key={index} className={[classes.row, extraClass].join(' ')}>{cells}</div>);
+
+      //Render the mobile rows
+      const extraClassMobile = index % 2 > 0 ? classes.oddRowMobile : '';
+      solidRowsMobile.push(
+        <div key={index} className={[classes.rowMobile, extraClassMobile].join(' ')}>
+          <div key={0} className={classes.innerRow}>
+            <div className={classes.label}>User ID: </div>
+            <div className={classes.value}>{item.UserId}</div>
+          </div>
+          <div  key={1} className={classes.innerRow}>
+            <div className={classes.label}>ID: </div>
+            <div className={classes.value}>{item.Id}</div>
+          </div>
+          <div key={2} className={classes.innerRow}>
+            <div className={classes.label}>Title: </div>
+            <div className={classes.value}><span className={classes.ellipsisTextMobile}>{item.Title}</span></div>
+          </div>
+          <div key={3} className={classes.innerRow}>
+            <div className={classes.label}>Completed: </div>
+            <div className={classes.value}>{item.Completed ? 'Yes' : 'No'}</div>
+          </div>
+        </div>
+      );
     })
   } else {
     console.log('myTodos', myTodos);
@@ -95,22 +119,25 @@ const TodoGrid: React.FC = () => {
   const rowsPart = myTodos && myTodos.length > 0 ? <div className={classes.solidRowsContainer}>{solidRows}</div>
             : <div className={classes.emptyContent}>No Data</div>;
 
+  const rowsPartMobile = myTodos && myTodos.length > 0 ? <>{solidRowsMobile}</>
+  : <div className={classes.emptyContent}>No Data</div>;
+
   const gridPart = <div className={classes.todoGridContent}>
     {headerRow}
     {rowsPart}
   </div>;
 
-  // const rows = [];
-  // for (let i = 0; i < originalTodos.length; i++) {
-  //   const t = originalTodos[i];
-  //   rows.push(<div key={i}>{`${t.UserId} - ${t.Id} - ${t.Title} - ${t.Completed}`}</div>)
-  // }
+  const gridPartMobile = <div className={classes.todoGridContentMobile}>
+    {rowsPartMobile}
+  </div>;
+
   return (
     <div className={classes.todoGridContainer}>
       <div className={classes.todoGridButtonRow}>
         <button onClick={() => setIsModalVisible(true)}>Add</button>
       </div>
       {gridPart}
+      {gridPartMobile}
     </div>
   );
 }

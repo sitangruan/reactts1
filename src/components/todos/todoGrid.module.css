@@ -12,7 +12,7 @@
   }
   
   .todoGridContent {
-    @apply mt-[5px] h-[90%] relative;
+    @apply mt-[5px] h-[90%] relative hidden md:block;
 
     .colUserId, .colId, .colCompleted {
       @apply w-[20%];
@@ -48,7 +48,6 @@
 
     .solidRowsContainer {
       @apply max-h-[640px] min-h-[300px] overflow-y-auto;
-
       .row {
         @apply flex flex-1 h-[32px];
 
@@ -72,6 +71,38 @@
 
     .emptyContent {
       @apply flex flex-1 max-h-[640px] min-h-[300px] justify-center items-center flex-col font-bold text-2xl;
+    }
+  }
+
+  .todoGridContentMobile {
+    @apply block md:hidden;
+
+    .rowMobile {
+      @apply flex flex-col border-b;
+
+      .innerRow {
+        @apply flex items-center h-[28px];
+
+        .label {
+          @apply font-bold mr-[10px];
+        }
+
+        .value {
+          @apply flex-1 flex items-center max-sm:max-w-[280px] max-md:max-w-[400px];
+          
+          .ellipsisTextMobile {
+            @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis;
+          }          
+        }
+      }
+    }
+
+    .rowMobile:hover {
+      @apply bg-[#0000001a];
+    }
+
+    .oddRowMobile {        
+      @apply bg-[#0000000a];
     }
   }
 }
