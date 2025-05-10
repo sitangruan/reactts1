@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
-.appHeader {
-  @apply flex max-md:flex-col justify-between items-center border-1 border-slate-500 pl-5 font-bold w-full h-20 max-md:h-18 max-md:justify-around box-border;
-  .titlePart {
-    @apply flex items-center;
-    
-    img {
-      @apply w-[40px] cursor-pointer
-    }
+.app {
+  @apply flex flex-col h-full; 
 
-    .title {
-      @apply text-3xl max-md:text-xl;
+  .appHeader {
+    @apply flex max-md:flex-col justify-between items-center border-1 border-slate-500 pl-5 font-bold w-full h-20 max-md:h-18 max-md:justify-around box-border;
+    .titlePart {
+      @apply flex items-center;
+      
+      img {
+        @apply w-[40px] cursor-pointer
+      }
+
+      .title {
+        @apply text-3xl max-md:text-xl;
+      }
     }
-  }
-  a {
-    @apply text-2xl max-md:text-base underline pr-4 text-blue-300 cursor-pointer;
+    a {
+      @apply text-2xl max-md:text-base underline pr-4 text-blue-300 cursor-pointer;
+    }
   }
 }
 

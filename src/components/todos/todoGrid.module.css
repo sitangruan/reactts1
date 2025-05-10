@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .todoGridContainer {
-  @apply h-full;
+  @apply flex flex-col h-full;
 
   .todoGridButtonRow {
     @apply flex items-center h-[40px] max-sm:justify-center max-sm:w-full;
@@ -12,7 +12,7 @@
   }
   
   .todoGridContent {
-    @apply mt-[5px] h-[90%] relative hidden md:block;
+    @apply flex flex-col flex-1 mt-[5px] relative hidden md:block;
 
     .colUserId, .colId, .colCompleted {
       @apply w-[20%];

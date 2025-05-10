@@ -4,7 +4,7 @@ import { linkedInUrl, sourceCodesUrl } from './common/constants';
 
 function App() {
   return (
-    <>
+    <div className={classes.app}>
       <header className={classes.appHeader}>
         <div className={classes.titlePart}>
           <a href={linkedInUrl} target='_blank'><img src={'/sitangCircle.png'} alt='Sitang Ruan'/></a>
@@ -13,7 +13,7 @@ function App() {
         <a href={sourceCodesUrl} target='_blank'>{sourceCodesUrl}</a>
       </header>
       <Body></Body>
-    </>
+    </div>
   )
 }
 
