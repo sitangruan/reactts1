@@ -1,4 +1,13 @@
-This is demo project to practice React + Typescript+ Vite + TailwindCss.
+This is demo project to prove the usage these technical aspects:
+
+ 1. React + Redux
+ 2. Typescript
+ 3. Vite
+ 4. Tailwind + Postcss
+ 5. Vitest + Jest
+ 6. React routing
+
+
 
 The deployment url is:
 
