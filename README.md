@@ -8,6 +8,7 @@ This is demo project to prove the usage these technical aspects:
  6. Vitest + Jest
  7. React routing
  8. Graph (chart) presentation
+ 9. Responsive design (in mobile view the layout is different)
 
 
 
