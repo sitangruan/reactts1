@@ -9,7 +9,7 @@
       @apply flex items-center;
       
       img {
-        @apply w-[40px] cursor-pointer
+        @apply w-10 cursor-pointer
       }
 
       .title {
@@ -19,6 +19,10 @@
     a {
       @apply text-2xl max-md:text-base underline pr-4 text-blue-300 cursor-pointer;
     }
+  }  
+
+  button {
+    @apply w-25 h-7 bg-gray-300 cursor-pointer;
   }
 }
 

@@ -30,7 +30,7 @@
 }
 
 .ldsSpinner div {
-  @apply left-[94px] top-[48px] absolute bg-[#333] w-[12px] h-[24px] rounded-[40%];
+  @apply left-[94px] top-[48px] absolute bg-[#333] w-3 h-6 rounded-[40%];
   
   -webkit-animation: ldsSpinner linear 1s infinite;
   animation: ldsSpinner linear 1s infinite;
@@ -111,7 +111,7 @@
   animation-delay: 0s;
 }
 .ldsSpinner {
-  @apply w-[200px]! h-[200px]!;
+  @apply w-50! h-50!;
   
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);

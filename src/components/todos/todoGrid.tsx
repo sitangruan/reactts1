@@ -7,6 +7,7 @@ import { useAppSelector } from '../../reducers/hooks';
 import { JSX, useMemo, useState } from 'react';
 import { compareWrapper } from '../../common/utillities';
 import { TodoFieldName, todoGridColumns } from '../../common/constants';
+import AddTodoModal from './addTodoModal';
 
 const TodoGrid: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
@@ -131,6 +132,8 @@ const TodoGrid: React.FC = () => {
     {rowsPartMobile}
   </div>;
 
+  const modalPart = isModalVisible ? <AddTodoModal onCloseModal={() => setIsModalVisible(false)}></AddTodoModal> : <></>;
+
   return (
     <div className={classes.todoGridContainer}>
       <div className={classes.todoGridButtonRow}>
@@ -138,6 +141,7 @@ const TodoGrid: React.FC = () => {
       </div>
       {gridPart}
       {gridPartMobile}
+      {modalPart}
     </div>
   );
 }

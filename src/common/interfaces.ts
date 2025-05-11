@@ -22,3 +22,7 @@ export interface LoadingMaskProps {
 export interface LoadingMaskServiceProps {
   children: ReactNode;
 }
+
+export interface AddTodoModalProps {
+  onCloseModal(): void;
+}

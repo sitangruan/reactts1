@@ -64,3 +64,7 @@ export enum PostActionType {
   DELETE = 'DELETE_POST',
   UPDATE = 'UPDATE_POST',
 }
+
+export const limits = {
+  maxTodoTitleLength: 100
+}

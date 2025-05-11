@@ -17,9 +17,14 @@ const apiCaller = {
       })
     },
     postTodo(item: TodoElement) {
+      const toSave = {
+        userId: item.UserId,
+        title: item.Title,
+        completed: item.Completed
+      }
       return fetch(apiUrls.todos, {
         method: 'POST',
-        body: JSON.stringify(item),
+        body: JSON.stringify(toSave),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         }

@@ -3,14 +3,14 @@
 .todosContainer {
   @apply flex flex-1 flex-col overflow-hidden p-[10px] h-full;
   .topRow {
-    @apply flex h-[40px] items-center justify-end;
+    @apply flex h-10 items-center justify-end;
 
     input[type='radio'], label {
       @apply cursor-pointer mr-[10px] max-md:mr-[5px];
     }
 
     button {
-      @apply w-[100px] h-[28px] text-base mr-[40px] max-md:mr-[10px] cursor-pointer bg-gray-300;
+      @apply w-25 h-7 text-base mr-[40px] max-md:mr-[10px] cursor-pointer bg-gray-300;
     }
   }
   .todoView {
