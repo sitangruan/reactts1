@@ -7,7 +7,7 @@ function App() {
     <div className={classes.app}>
       <header className={classes.appHeader}>
         <div className={classes.titlePart}>
-          <a href={linkedInUrl} target='_blank'><img src={'/sitangCircle.png'} alt='Sitang Ruan'/></a>
+          <a href={linkedInUrl} target='_blank'><img src={'/sitangCircle.png'} title='Sitang Ruan'/></a>
           <div className={classes.title}>Sitang React Demo 1</div>
         </div>
         <a href={sourceCodesUrl} target='_blank'>{sourceCodesUrl}</a>

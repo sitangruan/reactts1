@@ -20,6 +20,11 @@ export enum ViewMode {
   Graph,
 }
 
+export enum GraphType {
+  Bar = 0,
+  Pie,
+}
+
 export enum TodoCompletedType {
   YES = 'YES',
   NO = 'NO'

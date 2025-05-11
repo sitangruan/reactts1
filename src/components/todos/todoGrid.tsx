@@ -14,8 +14,6 @@ const TodoGrid: React.FC = () => {
   const [sortFieldName, setSortFieldName] = useState<string>('');
   const [isAscSorting, setIsAscSorting] = useState<boolean>(false);
 
-  console.log('isModalVisible', isModalVisible);
-
   const setSortingColumn = (fieldName: string): void => {
     if (sortFieldName === fieldName) {
       setIsAscSorting(!isAscSorting);

@@ -2,10 +2,12 @@ This is demo project to prove the usage these technical aspects:
 
  1. React + Redux
  2. Typescript
- 3. Vite
- 4. Tailwind + Postcss
- 5. Vitest + Jest
- 6. React routing
+ 3. Typed store state and hooks (useStore -> useAppStore, useDispatch -> useAppDispatch, useSelector -> useAppSelector)
+ 4. Vite
+ 5. Tailwind
+ 6. Vitest + Jest
+ 7. React routing
+ 8. Graph (chart) presentation
 
 
 
