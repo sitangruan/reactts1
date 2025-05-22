@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 .todosContainer {
-  @apply flex flex-1 flex-col overflow-hidden p-[10px] h-full;
+  @apply flex flex-1 flex-col overflow-y-auto p-[10px] h-full;
+  
   .topRow {
     @apply flex h-10 items-center justify-end;
 

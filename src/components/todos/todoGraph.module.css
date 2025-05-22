@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .todoGraphContainer {
-  @apply h-full;
+  @apply overflow-y-auto;
 
   .todoGraphButtonRow {
     @apply flex items-center h-10;
