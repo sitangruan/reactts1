@@ -48,6 +48,7 @@
 
     .solidRowsContainer {
       @apply max-h-160 min-h-75 overflow-y-auto;
+
       .row {
         @apply flex flex-1 h-8;
 
@@ -75,34 +76,42 @@
   }
 
   .todoGridContentMobile {
-    @apply block md:hidden;
+    @apply block md:hidden max-h-[65vh] mt-1;
 
-    .rowMobile {
-      @apply flex flex-col border-b;
+    .solidRowsContainerMobile {
+      @apply h-full overflow-y-auto;
+      
+      .rowMobile {
+        @apply flex flex-col border-b;
 
-      .innerRow {
-        @apply flex items-center h-7;
+        .innerRow {
+          @apply flex items-center h-7;
 
-        .label {
-          @apply font-bold mr-3;
+          .label {
+            @apply font-bold mr-3;
+          }
+
+          .value {
+            @apply flex-1 flex items-center max-sm:max-w-70 max-md:max-w-100;
+            
+            .ellipsisTextMobile {
+              @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis;
+            }          
+          }
         }
+      }
 
-        .value {
-          @apply flex-1 flex items-center max-sm:max-w-70 max-md:max-w-100;
-          
-          .ellipsisTextMobile {
-            @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis;
-          }          
-        }
+      .rowMobile:hover {
+        @apply bg-[#0000001a];
+      }
+
+      .oddRowMobile {        
+        @apply bg-[#0000000a];
       }
     }
 
-    .rowMobile:hover {
-      @apply bg-[#0000001a];
-    }
-
-    .oddRowMobile {        
-      @apply bg-[#0000000a];
+    .emptyContent {
+      @apply flex flex-1 max-h-160 min-h-75 justify-center items-center flex-col font-bold text-2xl;
     }
   }
 }

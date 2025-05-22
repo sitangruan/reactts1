@@ -118,7 +118,7 @@ const TodoGrid: React.FC = () => {
   const rowsPart = myTodos && myTodos.length > 0 ? <div className={classes.solidRowsContainer}>{solidRows}</div>
             : <div className={classes.emptyContent}>No Data</div>;
 
-  const rowsPartMobile = myTodos && myTodos.length > 0 ? <>{solidRowsMobile}</>
+  const rowsPartMobile = myTodos && myTodos.length > 0 ? <div className={classes.solidRowsContainerMobile}>{solidRowsMobile}</div>
   : <div className={classes.emptyContent}>No Data</div>;
 
   const gridPart = <div className={classes.todoGridContent}>
