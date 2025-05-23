@@ -10,13 +10,16 @@ This is demo project to prove the usage these technical aspects:
  8. Graph (chart) presentation
  9. Responsive design (in mobile view the layout is different)
 
-
+The source codes url is:
+https://github.com/sitangruan/reactts1
 
 The deployment url is:
 
 https://gray-flower-04aef540f.6.azurestaticapps.net/
 
 By Sitang Ruan.
+https://www.linkedin.com/in/sitang-ruan/
+
 
 Thanks for viewing!
 
