@@ -24,7 +24,7 @@
           @apply flex items-center h-10;
 
           .label {
-            @apply w-[25%] flex-[0_0_basis];
+            @apply w-[32%] flex-[0_0_basis];
           }
 
           .value {
