@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .sidebarContainer {
-  @apply flex md:h-full md:shrink-[0.52] flex-col overflow-hidden border-r-2 w-50 max-md:w-full max-md:justify-around max-md:flex-row max-md:border-r-0 max-md:border-b-2;
+  @apply flex md:h-full shrink-0 max-md:h-10 flex-col overflow-hidden border-r-2 w-40 max-md:w-full max-md:justify-around max-md:flex-row max-md:border-r-0 max-md:border-b-2;
   
   .link {
     @apply font-bold text-xl p-5 max-md:text-base max-md:p-2 text-center max-md:flex-1;
