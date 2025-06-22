@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 .todosContainer {
-  @apply flex flex-col flex-1 shrink-1 h-full p-4 box-border overflow-y-auto;
+  @apply flex flex-col box-border w-full shrink-1 p-4 h-full box-border overflow-y-auto;
   
   .topRow {
-    @apply flex h-10 items-center justify-end;
+    @apply flex h-10 items-center justify-end w-full;
 
     input[type='radio'], label {
       @apply cursor-pointer mr-[10px] max-md:mr-[5px];
@@ -15,6 +15,6 @@
     }
   }
   .todoView {
-    @apply flex-1;
+    @apply w-full h-[calc(100vh-5rem)] max-md:h-[calc(100vh-8rem)];
   }
 }

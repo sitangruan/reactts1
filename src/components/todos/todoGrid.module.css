@@ -12,7 +12,7 @@
   }
   
   .todoGridContent {
-    @apply flex flex-col max-h-[calc(100vh-210px)] mt-1 relative hidden md:block;
+    @apply flex flex-col h-[calc(100vh-210px)] hidden mt-1 relative hidden md:block;
 
     .colUserId, .colId, .colCompleted {
       @apply w-[20%];
@@ -27,7 +27,7 @@
     }
 
     .headerRow {
-      @apply flex w-full justify-between gap-1 h-10 flex-[0_0_basis];
+      @apply flex justify-between gap-1 h-10 flex-[0_0_basis];
 
       .colHeader {
         @apply flex justify-center items-center cursor-pointer font-bold bg-gray-200;
@@ -47,16 +47,16 @@
     }
 
     .solidRowsContainer {
-      @apply h-[calc(100%-50px)] overflow-y-auto;
+      @apply h-[calc(100%-3rem)] overflow-y-auto flex flex-col;
 
       .row {
-        @apply flex flex-1 h-8;
+        @apply flex h-8;
 
         .cell {
           @apply flex h-8 items-center pl-4;
 
           .ellipsisText {
-            @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis;
+            @apply inline-block overflow-hidden whitespace-nowrap text-ellipsis w-[95%];
           }
         }
       }
