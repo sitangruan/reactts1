@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 .innerBodyContainer {
-  @apply flex md:h-full flex-1 flex-col overflow-hidden relative p-[10px];
+  @apply flex h-[calc(100vh-80px)] max-md:h-[calc(100vh-120px)] max-md:flex-col w-full box-border relative p-[10px];
 }

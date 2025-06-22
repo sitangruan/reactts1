@@ -1,18 +1,18 @@
 @import 'tailwindcss';
 
 .todoGridContainer {
-  @apply flex flex-col h-full;
+  @apply flex flex-col h-[calc(100%-20px)] mt-1;
 
   .todoGridButtonRow {
-    @apply flex items-center h-10 max-sm:justify-center max-sm:w-full;
+    @apply flex items-center h-10 max-md:justify-center max-md:w-full;
     
     button {
-      @apply w-30 h-7 max-sm:w-[90%] cursor-pointer bg-gray-300;
+      @apply w-30 h-7 max-md:w-[90%] cursor-pointer bg-gray-300;
     }
   }
   
   .todoGridContent {
-    @apply flex flex-col flex-1 mt-1 relative hidden md:block;
+    @apply flex flex-col max-h-[calc(100vh-210px)] mt-1 relative hidden md:block;
 
     .colUserId, .colId, .colCompleted {
       @apply w-[20%];
@@ -47,7 +47,7 @@
     }
 
     .solidRowsContainer {
-      @apply max-h-160 min-h-75 overflow-y-auto;
+      @apply h-[calc(100%-50px)] overflow-y-auto;
 
       .row {
         @apply flex flex-1 h-8;
@@ -76,7 +76,7 @@
   }
 
   .todoGridContentMobile {
-    @apply block md:hidden max-h-[65vh] mt-1;
+    @apply block md:hidden max-h-[calc(100vh-250px)] mt-1;
 
     .solidRowsContainerMobile {
       @apply h-full overflow-y-auto;
